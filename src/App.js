@@ -9,12 +9,6 @@ class App extends Component{
     return (
       <div className="App container">
         <Navbar fluid collapseOnSelect> 
-           {/* <Navbar.Brand>
-              <Link to="/">
-                Scratch
-              </Link>
-            </Navbar.Brand>
-            <Navbar.Toggle /> */}
             <Navbar bg="dark" variant="dark">
               <Navbar.Brand href="#home">Navbar</Navbar.Brand>
               <Nav className="mr-auto">
