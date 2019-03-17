@@ -1,34 +1,30 @@
 import React, {Component} from 'react';
-// import {Link} from 'react-router-dom';
-import {Navbar,Nav, FormControl, Button, Form} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import {Navbar,Nav, FormControl, Button, Form, NavItem,} from 'react-bootstrap';
 import './App.css';
 import Routes from './Routes';
+import { LinkContainer } from "react-router-bootstrap";
 
 class App extends Component{
   render() {
     return (
-      <div className="App container">
-        <Navbar fluid collapseOnSelect> 
-           {/* <Navbar.Brand>
-              <Link to="/">
-                Scratch
-              </Link>
-            </Navbar.Brand>
-            <Navbar.Toggle /> */}
-            <Navbar bg="dark" variant="dark">
-              <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-              <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-              </Nav>
-              <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-info">Search</Button>
-              </Form>
-            </Navbar>
-        </Navbar>  
-        <Routes /> 
+      <div>
+        <Navbar bg="primary" variant="dark">
+          <Navbar.Brand href="#home">Rotati</Navbar.Brand>
+          <Nav className="mr-auto">
+            <LinkContainer to="/signup" className="nav-link">
+                <NavItem>Signup</NavItem> 
+            </LinkContainer>
+            <LinkContainer to="/login" className="nav-link">
+                <NavItem>Login</NavItem> 
+            </LinkContainer>
+          </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-light">Search</Button>
+          </Form>
+        </Navbar>
+        <Routes/>
       </div>
     );
   } 
